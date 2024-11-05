@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Verity Law Collective</title>
-    <meta http-equiv="Cache-Control" content="no-store">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <link href="styles.css?timestamp=2024-11-05-14:45" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2c5282;
-            --secondary-color: #4299e1;
-            --text-color: #2d3748;
-            --light-bg: #f7fafc;
+            --primary-color: #1a1f27; /* Darker primary color */
+            --secondary-color: #3a3f47; /* Darker secondary color */
+            --text-color: #f0f0f0; /* Light text color for contrast */
+            --light-bg: #2c2f35; /* Darker background color */
+            --card-bg: #444a54; /* Card background color */
+            --button-bg: #0056b3; /* Button background color */
         }
         
         * {
@@ -26,11 +24,12 @@
             font-family: system-ui, -apple-system, sans-serif;
             line-height: 1.6;
             color: var(--text-color);
+            background: var(--light-bg);
         }
 
         .header {
             background: var(--primary-color);
-            color: white;
+            color: var(--text-color);
             padding: 1rem;
         }
 
@@ -47,19 +46,26 @@
         }
 
         .nav-links a {
-            color: white;
+            color: var(--text-color);
             text-decoration: none;
         }
 
         .hero {
-            background: var(--light-bg);
             padding: 3rem 1rem;
             text-align: center;
         }
 
+        .content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: var(--card-bg);
+            border-radius: 8px;
+        }
+
         .cta-section {
             background: var(--primary-color);
-            color: white;
+            color: var(--text-color);
             padding: 3rem 1rem;
             text-align: center;
         }
@@ -67,24 +73,11 @@
         .button {
             display: inline-block;
             padding: 0.75rem 1.5rem;
-            background: var(--secondary-color);
-            color: white;
+            background: var(--button-bg);
+            color: var(--text-color);
             text-decoration: none;
             border-radius: 4px;
             margin-top: 1rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        .footer {
-            background: var(--text-color);
-            color: white;
-            padding: 2rem;
-            text-align: center;
         }
 
         @media (max-width: 768px) {
@@ -94,45 +87,18 @@
                 text-align: center;
             }
         }
-
-        section {
-            padding: 2rem;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        section p {
-            font-size: 1.125rem;
-            margin-bottom: 1.5rem;
-        }
-
-        section ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        section ul li {
-            margin-bottom: 1rem;
-        }
-
-        section ul li strong {
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <h1>About Verity Law Collective</h1>
+            <h1>Verity Law Collective</h1>
         </div>
     </header>
 
     <nav class="nav">
         <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="legal-resources.html">Legal Resources</a></li>
             <li><a href="legal-aid.html">Legal Aid Services</a></li>
@@ -141,49 +107,35 @@
         </ul>
     </nav>
 
-
     <section class="hero">
         <div class="container">
-            <h2>Our Mission</h2>
-            <p>At Verity Law Collective, we are committed to providing free legal resources, support, and consultation to individuals and communities who need it most. Our mission is to bridge the gap between those seeking legal assistance and the support they deserve.</p>
+            <h2>About Us</h2>
+            <p>Empowering communities through legal education and support.</p>
         </div>
     </section>
 
-    <section class="container">
-        <h2>What We Do</h2>
-        <p>Verity Law Collective works with dedicated legal professionals, law students, and volunteers to offer assistance in various legal areas. We aim to empower individuals and help them navigate the often overwhelming legal system with confidence.</p>
-
-        <ul>
-            <li><strong>Legal Resources:</strong> Access free legal resources, including guides, templates, and articles to help you understand your rights and responsibilities.</li>
-            <li><strong>Legal Aid:</strong> We provide pro bono legal aid and consultations to those in need, ensuring everyone has access to justice, regardless of their financial situation.</li>
-            <li><strong>Advocacy:</strong> We advocate for legal reforms and work to raise awareness on key issues affecting marginalized communities.</li>
-        </ul>
-    </section>
-
-    <!-- Added heartfelt "Why We Do It" section -->
-    <section class="container">
-        <h2>Why We Do It</h2>
-        <p>At Verity Law Collective, we believe that access to justice should not be a privilege for the few, but a right for all. We understand that the legal system can often feel overwhelming, especially for those without the resources to navigate it. Our work is driven by the belief that everyone deserves the opportunity to have their voice heard, to seek redress, and to protect their rights—no matter their background or financial status.</p>
-        <p>We do this because we’ve seen the impact that a lack of legal representation can have on individuals and families, often leaving them feeling voiceless and helpless. Our purpose is to ensure that no one has to face the legal system alone. Every day, we work with individuals from all walks of life, helping them find the support they need to fight for justice and equality. It's not just about legal advice—it's about restoring dignity, providing hope, and making sure that everyone has the chance to stand up for themselves in a system that’s supposed to work for them.</p>
+    <section class="content container">
+        <h3>Who We Are</h3>
+        <p>The Verity Law Collective is dedicated to providing accessible legal resources and support to individuals and communities in need. Our mission is to ensure that everyone has access to the legal knowledge and assistance they deserve, regardless of their circumstances.</p>
+        
+        <h3>Why We Do It</h3>
+        <p>We believe that everyone should have the opportunity to understand their rights and navigate the complexities of the legal system. Our team of volunteer lawyers and law students is passionate about making a difference and empowering individuals to take control of their legal situations. Together, we can build a more equitable society where justice is accessible to all.</p>
     </section>
 
     <section class="cta-section">
         <div class="container">
-            <h2>Get Involved</h2>
-            <p>Interested in making a difference? Join us by volunteering, donating, or partnering with us to support our mission.</p>
-            <a href="contact.html?timestamp=2024-11-05-14:45" class="button">Contact Us</a>
+            <h2>Need Legal Assistance?</h2>
+            <p>Connect with our volunteer lawyers and law students for free consultation.</p>
+            <a href="consultation.html" class="button">Request Consultation</a>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
             <p>© 2024 Verity Law Collective. All rights reserved.</p>
-            <p>Contact us: support@veritylaw.org</p>
+            <p>Contact us: support@veritylawcollective.org</p>
         </div>
     </footer>
-
-    <script src="script.js?timestamp=2024-11-05-14:45"></script>
 </body>
 </html>
-
 
