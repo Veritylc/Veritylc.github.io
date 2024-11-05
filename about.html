@@ -1,1 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Verity Law Collective</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assuming you have a separate CSS file -->
+    <style>
+        :root {
+            --primary-color: #2c5282;
+            --secondary-color: #4299e1;
+            --text-color: #2d3748;
+            --light-bg: #f7fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+        }
+
+        .nav {
+            background: var(--secondary-color);
+            padding: 1rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .about-section {
+            padding: 3rem 1rem;
+            background: var(--light-bg);
+            text-align: center;
+        }
+
+        .about-section h2 {
+            margin-bottom: 1rem;
+        }
+
+        .about-section p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .cta-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+
+        .footer {
+            background: var(--text-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Verity Law Collective</h1>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="legal-aid.html">Legal Aid</a></li>
+            <li><a href="legal-resources.html">Legal Resources</a></li>
+        </ul>
+    </nav>
+
+    <section class="about-section">
+        <div class="container">
+            <h2>About Verity Law Collective</h2>
+            <p>Verity Law Collective is a nonprofit organization committed to providing free legal aid and consultation services to underserved communities. We believe that access to justice is a fundamental right and are dedicated to helping individuals navigate legal challenges without financial burden.</p>
+            <p>Our mission extends beyond offering legal assistance; we are passionate about empowering the next generation of legal professionals. Through mentorship, youth empowerment programs, and advocacy for legal reform, we aim to build a more equitable and just society for all.</p>
+            <p>By working closely with volunteer lawyers, law students, and advocates, we strive to ensure that everyone has the support they need to understand and assert their legal rights.</p>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Get Involved</h2>
+            <p>Join us in our mission to create a more just world. Whether through volunteering, donations, or simply spreading the word, you can help make a difference.</p>
+            <a href="contact.html" class="button">Contact Us to Learn More</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Verity Law Collective. All rights reserved.</p>
+            <p>Contact us: support@veritylaw.org</p>
+        </div>
+    </footer>
+</body>
+</html>
 
