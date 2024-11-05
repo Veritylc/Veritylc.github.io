@@ -1,83 +1,179 @@
-:root {
-    --primary-color: #1a365d; /* Dark blue */
-    --secondary-color: #2a9fd6; /* Light blue */
-    --text-color: #1a202c; /* Dark gray */
-    --light-bg: #f0f4f8; /* Light background */
-    --card-bg: #ffffff; /* White for cards */
-}
-
-* {
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
-body {
-    font-family: system-ui, -apple-system, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background: var(--light-bg);
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
+h1, h2, h3, h4 {
+    color: #2C3E50;
+    font-weight: 600;
+}
+
+a {
+    color: #2980B9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
 .header {
-    background: var(--primary-color);
-    color: white;
-    padding: 1rem;
+    background-color: #2C3E50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
 }
 
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navigation Bar */
 .nav {
-    background: var(--secondary-color);
-    padding: 1rem;
+    background-color: #34495E;
+    padding: 10px 0;
 }
 
 .nav-links {
     list-style: none;
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
+    padding: 0;
+    text-align: center;
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
+.nav-links li {
+    display: inline;
+    margin-right: 20px;
 }
 
+.nav-links li a {
+    color: #fff;
+    font-size: 1.1em;
+    padding: 5px 10px;
+}
+
+.nav-links li a:hover {
+    background-color: #2980B9;
+    border-radius: 5px;
+}
+
+/* Hero Section */
 .hero {
-    padding: 3rem 1rem;
+    background-color: #2980B9;
+    color: #fff;
+    padding: 50px 0;
     text-align: center;
-    background: var(--primary-color);
-    color: white;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
+.hero p {
+    font-size: 1.1em;
+}
+
+/* Main Content */
 .content {
-    padding: 2rem;
-    background: var(--card-bg);
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 30px 0;
 }
 
+.content h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.content ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.content ul li {
+    margin-bottom: 10px;
+}
+
+.content ul li a {
+    font-size: 1.1em;
+}
+
+/* Featured Resources Section */
+.content h4 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+/* FAQs Section */
+.faqs {
+    margin-top: 40px;
+}
+
+.faqs p {
+    margin-bottom: 15px;
+}
+
+/* Footer */
 .footer {
-    background: var(--text-color);
-    color: white;
-    padding: 2rem;
+    background-color: #2C3E50;
+    color: #fff;
     text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
 }
 
-h2 {
-    margin-bottom: 1rem;
+.footer p {
+    margin: 0;
+    font-size: 1em;
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
+/* Additional Styling */
+strong {
+    color: #2C3E50;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .nav-links li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .content ul li {
+        font-size: 1em;
+    }
+
+    .footer p {
+        font-size: 0.9em;
     }
 }
+
 
