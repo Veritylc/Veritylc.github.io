@@ -65,11 +65,37 @@
             text-align: center;
         }
 
+        .cta-section {
+            background-color: var(--light-bg);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .cta-section .button {
+            background-color: #3182ce;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+
+        .cta-section .button:hover {
+            background-color: #2b6cb0;
+        }
+
         .footer {
             background: var(--light-bg);
             color: var(--text-color);
             padding: 2rem;
             text-align: center;
+        }
+
+        .footer .social-icons a {
+            margin: 0 1rem;
+            color: white;
+            text-decoration: none;
         }
 
         @media (max-width: 768px) {
@@ -126,6 +152,11 @@
         <div class="container">
             <p>© 2024 Verity Law Collective. All rights reserved.</p>
             <p>Contact us: support@veritylawcollective.org</p>
+            <div class="social-icons">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
         </div>
     </footer>
 </body>
