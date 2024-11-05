@@ -1,348 +1,181 @@
-Improve this <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justice for All Initiative - Legal Resources & Support</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Dark mode transitions */
-        * {
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        /* Dark mode colors */
         :root {
             --primary-color: #2c5282;
             --secondary-color: #4299e1;
             --text-color: #2d3748;
             --light-bg: #f7fafc;
         }
-
-        [data-theme="dark"] {
-            --primary-color: #1a365d;
-            --secondary-color: #2b6cb0;
-            --text-color: #f7fafc;
-            --light-bg: #2d3748;
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
             font-family: system-ui, -apple-system, sans-serif;
             line-height: 1.6;
+            color: var(--text-color);
         }
 
-        body[data-theme="dark"] {
-            background-color: #1a202c;
-            color: #f7fafc;
+        .header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+        }
+
+        .nav {
+            background: var(--secondary-color);
+            padding: 1rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            background: var(--light-bg);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
         }
 
         .resource-card {
-            transform: translateY(0);
-            transition: all 0.3s ease;
-        }
-
-        .resource-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-form {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-out;
-            opacity: 0;
-        }
-
-        .contact-form.active {
-            max-height: 500px;
-            opacity: 1;
-        }
-
-        .search-container {
-            position: relative;
-            max-width: 500px;
-            margin: 2rem auto;
-        }
-
-        .search-icon {
-            position: absolute;
-            left: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #718096;
-        }
-
-        .search-input {
-            width: 100%;
-            padding: 0.75rem 1rem 0.75rem 2.5rem;
             border: 1px solid #e2e8f0;
-            border-radius: 0.375rem;
+            border-radius: 8px;
+            padding: 1.5rem;
             background: white;
         }
 
-        body[data-theme="dark"] .search-input {
-            background: #2d3748;
-            border-color: #4a5568;
+        .cta-section {
+            background: var(--primary-color);
             color: white;
+            padding: 3rem 1rem;
+            text-align: center;
         }
 
-        .theme-toggle {
-            position: fixed;
-            top: 1rem;
-            right: 1rem;
-            padding: 0.5rem;
-            border-radius: 50%;
-            background: none;
-            border: none;
-            cursor: pointer;
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--secondary-color);
             color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
         }
 
-        .fade-in {
-            animation: fadeIn 0.5s ease-out forwards;
+        .footer {
+            background: var(--text-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
         }
 
         @media (max-width: 768px) {
             .nav-links {
                 flex-direction: column;
                 gap: 1rem;
+                text-align: center;
             }
-        }
-
-        /* Dark mode specific styles for resource cards */
-        body[data-theme="dark"] .resource-card {
-            background-color: #2d3748;
-            color: #f7fafc;
-        }
-
-        body[data-theme="dark"] .contact-form {
-            background-color: #2d3748;
-        }
-
-        body[data-theme="dark"] input,
-        body[data-theme="dark"] textarea {
-            background-color: #1a202c;
-            color: #f7fafc;
-            border-color: #4a5568;
         }
     </style>
 </head>
 <body>
-    <header class="bg-blue-800 text-white p-4 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Justice for All Initiative</h1>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                </svg>
-            </button>
+    <header class="header">
+        <div class="container">
+            <h1>Justice for All Initiative</h1>
         </div>
     </header>
 
-    <nav class="bg-blue-500 p-4">
-        <ul class="nav-links flex justify-center gap-8 container mx-auto">
-            <li><a href="#resources" class="text-white hover:text-blue-100">Legal Resources</a></li>
-            <li><a href="#services" class="text-white hover:text-blue-100">Legal Aid Services</a></li>
-            <li><button id="contactButton" class="text-white hover:text-blue-100">Contact Us</button></li>
-            <li><a href="#blog" class="text-white hover:text-blue-100">Blog & News</a></li>
+    <nav class="nav">
+        <ul class="nav-links">
+            <li><a href="#resources">Legal Resources</a></li>
+            <li><a href="#services">Legal Aid Services</a></li>
+            <li><a href="#consultation">Get Consultation</a></li>
+            <li><a href="#blog">Blog & News</a></li>
         </ul>
     </nav>
 
-    <div class="search-container">
-        <span class="search-icon">🔍</span>
-        <input 
-            type="text" 
-            id="searchInput"
-            class="search-input" 
-            placeholder="Search resources and articles..." 
-        >
-    </div>
-
-    <div id="contactForm" class="contact-form container mx-auto px-4">
-        <div class="max-w-lg mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-            <h3 class="text-xl font-bold mb-4">Contact Us</h3>
-            <form id="contactFormElement" class="space-y-4">
-                <div>
-                    <input type="text" name="name" placeholder="Your Name" class="w-full p-2 border rounded" required>
-                </div>
-                <div>
-                    <input type="email" name="email" placeholder="Your Email" class="w-full p-2 border rounded" required>
-                </div>
-                <div>
-                    <textarea name="message" placeholder="Your Message" class="w-full p-2 border rounded min-h-[100px]" required></textarea>
-                </div>
-                <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
-                    Send Message
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <section class="hero bg-gray-50 py-12 text-center fade-in">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-4">Access to Justice for Everyone</h2>
-            <p class="text-gray-600 dark:text-gray-300">Free legal resources and support for our community</p>
+    <section class="hero">
+        <div class="container">
+            <h2>Access to Justice for Everyone</h2>
+            <p>Free legal resources and support for our community</p>
         </div>
     </section>
 
-    <section id="resources" class="container mx-auto px-4 py-12">
-        <h2 class="text-2xl font-bold mb-8">Legal Resources</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="resourcesGrid">
-            <!-- Resources will be dynamically populated here -->
+    <section class="resources-grid container">
+        <div class="resource-card">
+            <h3>Tenant Rights</h3>
+            <p>Understanding your rights as a tenant, dealing with landlord issues, and housing regulations.</p>
+            <a href="#" class="button">Learn More</a>
+        </div>
+        <div class="resource-card">
+            <h3>Immigration Procedures</h3>
+            <p>Step-by-step guides for immigration processes, documentation, and legal requirements.</p>
+            <a href="#" class="button">Learn More</a>
+        </div>
+        <div class="resource-card">
+            <h3>Social Welfare</h3>
+            <p>Information about social benefits, eligibility criteria, and application procedures.</p>
+            <a href="#" class="button">Learn More</a>
         </div>
     </section>
 
-    <section class="cta-section bg-blue-800 text-white py-12 text-center">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-4">Need Legal Assistance?</h2>
-            <p class="mb-6">Connect with our volunteer lawyers and law students for free consultation</p>
-            <button onclick="document.getElementById('contactButton').click()" class="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600">
-                Request Consultation
-            </button>
+    <section class="cta-section">
+        <div class="container">
+            <h2>Need Legal Assistance?</h2>
+            <p>Connect with our volunteer lawyers and law students for free consultation</p>
+            <a href="#consultation" class="button">Request Consultation</a>
         </div>
     </section>
 
-    <section id="blog" class="container mx-auto px-4 py-12">
-        <h2 class="text-2xl font-bold mb-8">Latest Legal Updates</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="blogGrid">
-            <!-- Blog posts will be dynamically populated here -->
+    <section id="blog" class="container">
+        <h2>Latest Legal Updates</h2>
+        <div class="resources-grid">
+            <div class="resource-card">
+                <h3>Understanding Your Rights</h3>
+                <p>Recent changes in tenant protection laws and what they mean for you.</p>
+                <a href="#" class="button">Read More</a>
+            </div>
+            <div class="resource-card">
+                <h3>Legal Aid Success Stories</h3>
+                <p>How our volunteer lawyers helped community members resolve their legal challenges.</p>
+                <a href="#" class="button">Read More</a>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p class="mb-2">© 2024 Justice for All Initiative. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Justice for All Initiative. All rights reserved.</p>
             <p>Contact us: support@justiceforall.org</p>
         </div>
     </footer>
-
-    <script>
-        // Wait for DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize data
-            const resources = [
-                {
-                    title: "Tenant Rights",
-                    description: "Understanding your rights as a tenant, dealing with landlord issues, and housing regulations.",
-                    tags: ["housing", "tenants", "rights"]
-                },
-                {
-                    title: "Immigration Procedures",
-                    description: "Step-by-step guides for immigration processes, documentation, and legal requirements.",
-                    tags: ["immigration", "documentation", "legal"]
-                },
-                {
-                    title: "Social Welfare",
-                    description: "Information about social benefits, eligibility criteria, and application procedures.",
-                    tags: ["welfare", "benefits", "social"]
-                }
-            ];
-
-            const blogPosts = [
-                {
-                    title: "Understanding Your Rights",
-                    description: "Recent changes in tenant protection laws and what they mean for you.",
-                    tags: ["rights", "tenant", "law"]
-                },
-                {
-                    title: "Legal Aid Success Stories",
-                    description: "How our volunteer lawyers helped community members resolve their legal challenges.",
-                    tags: ["success", "legal aid", "community"]
-                }
-            ];
-
-            // Get DOM elements
-            const themeToggle = document.getElementById('themeToggle');
-            const contactButton = document.getElementById('contactButton');
-            const contactForm = document.getElementById('contactForm');
-            const searchInput = document.getElementById('searchInput');
-            const resourcesGrid = document.getElementById('resourcesGrid');
-            const blogGrid = document.getElementById('blogGrid');
-            const contactFormElement = document.getElementById('contactFormElement');
-
-            // Theme toggle functionality
-            themeToggle.addEventListener('click', function() {
-                const body = document.body;
-                const currentTheme = body.getAttribute('data-theme');
-                body.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
-            });
-
-            // Contact form toggle
-            contactButton.addEventListener('click', function() {
-                contactForm.classList.toggle('active');
-            });
-
-            // Search functionality
-            searchInput.addEventListener('input', function(e) {
-                const searchTerm = e.target.value.toLowerCase();
-                
-                const filteredResources = resources.filter(resource =>
-                    resource.title.toLowerCase().includes(searchTerm) ||
-                    resource.description.toLowerCase().includes(searchTerm) ||
-                    resource.tags.some(tag => tag.toLowerCase().includes(searchTerm))
-                );
-                renderResources(filteredResources);
-
-                const filteredPosts = blogPosts.filter(post =>
-                    post.title.toLowerCase().includes(searchTerm) ||
-                    post.description.toLowerCase().includes(searchTerm) ||
-                    post.tags.some(tag => tag.toLowerCase().includes(searchTerm))
-                );
-                renderBlogPosts(filteredPosts);
-            });
-
-            // Form submission
-            contactFormElement.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const formData = new FormData(contactFormElement);
-                console.log('Form submitted:', Object.fromEntries(formData));
-                alert('Thank you for your message. We will get back to you soon!');
-                contactFormElement.reset();
-                contactForm.classList.remove('active');
-            });
-
-            // Render functions
-            function renderResources(items) {
-                resourcesGrid.innerHTML = items.map(item => createCard(item)).join('');
-            }
-
-            function renderBlogPosts(items) {
-                blogGrid.innerHTML = items.map(item => createCard(item, 'Read More')).join('');
-            }
-
-            function createCard(item, buttonText = 'Learn More') {
-                return `
-                    <div class="resource-card bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 fade-in">
-                        <h3 class="text-xl font-bold mb-4">${item.title}</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">${item.description}</p>
-                        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                            ${buttonText}
-                        </button>
-                    </div>
-                `;
-            }
-
-            // Initial render
-            renderResources(resources);
-            renderBlogPosts(blogPosts);
-
-            // Check for saved theme preference
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                document.body.setAttribute('data-theme', savedTheme);
-            }
-
-            // Save theme preference when changed
-            themeToggle.addEventListener('click', function() {
-                const currentTheme = document.body.getAttribute('data-theme');
-                localStorage.setItem('theme', currentTheme);
-            });
-        });
-    </script>
 </body>
 </html>
