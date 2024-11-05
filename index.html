@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verity law collective - Legal Resources & Support</title>
+    <title>Verity Law Collective - Legal Resources & Support</title>
     <style>
         :root {
-            --primary-color: #2c5282;
-            --secondary-color: #4299e1;
-            --text-color: #2d3748;
-            --light-bg: #f7fafc;
+            --primary-color: #1a1f27; /* Darker primary color */
+            --secondary-color: #3a3f47; /* Darker secondary color */
+            --text-color: #f0f0f0; /* Light text color for contrast */
+            --light-bg: #2c2f35; /* Darker background color */
+            --card-bg: #444a54; /* Card background color */
+            --button-bg: #0056b3; /* Button background color */
         }
         
         * {
@@ -22,11 +24,12 @@
             font-family: system-ui, -apple-system, sans-serif;
             line-height: 1.6;
             color: var(--text-color);
+            background: var(--light-bg);
         }
 
         .header {
             background: var(--primary-color);
-            color: white;
+            color: var(--text-color);
             padding: 1rem;
         }
 
@@ -43,12 +46,11 @@
         }
 
         .nav-links a {
-            color: white;
+            color: var(--text-color);
             text-decoration: none;
         }
 
         .hero {
-            background: var(--light-bg);
             padding: 3rem 1rem;
             text-align: center;
         }
@@ -61,15 +63,15 @@
         }
 
         .resource-card {
-            border: 1px solid #e2e8f0;
+            border: 1px solid #666;
             border-radius: 8px;
             padding: 1.5rem;
-            background: white;
+            background: var(--card-bg);
         }
 
         .cta-section {
             background: var(--primary-color);
-            color: white;
+            color: var(--text-color);
             padding: 3rem 1rem;
             text-align: center;
         }
@@ -77,8 +79,8 @@
         .button {
             display: inline-block;
             padding: 0.75rem 1.5rem;
-            background: var(--secondary-color);
-            color: white;
+            background: var(--button-bg);
+            color: var(--text-color);
             text-decoration: none;
             border-radius: 4px;
             margin-top: 1rem;
@@ -91,8 +93,8 @@
         }
 
         .footer {
-            background: var(--text-color);
-            color: white;
+            background: var(--primary-color);
+            color: var(--text-color);
             padding: 2rem;
             text-align: center;
         }
@@ -109,27 +111,19 @@
 <body>
     <header class="header">
         <div class="container">
-            <h1>Justice for All Initiative</h1>
+            <h1>Verity Law Collective</h1>
         </div>
     </header>
 
     <nav class="nav">
         <ul class="nav-links">
             <li><a href="about.html">About</a></li>
-            <li><a href="resources.html">Legal Resources</a></li>
-            <li><a href="services.html">Legal Aid Services</a></li>
+            <li><a href="legal-resources.html">Legal Resources</a></li>
+            <li><a href="legal-aid.html">Legal Aid Services</a></li>
             <li><a href="consultation.html">Get Consultation</a></li>
             <li><a href="blog.html">Blog & News</a></li>
         </ul>
     </nav>
-
-    <!-- About Section -->
-    <section class="hero">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>We are dedicated to providing free legal resources and support to empower individuals in need. Our mission is to ensure access to justice for everyone.</p>
-        </div>
-    </section>
 
     <section class="hero">
         <div class="container">
@@ -142,17 +136,17 @@
         <div class="resource-card">
             <h3>Tenant Rights</h3>
             <p>Understanding your rights as a tenant, dealing with landlord issues, and housing regulations.</p>
-            <a href="resources.html" class="button">Learn More</a>
+            <a href="#" class="button">Learn More</a>
         </div>
         <div class="resource-card">
             <h3>Immigration Procedures</h3>
             <p>Step-by-step guides for immigration processes, documentation, and legal requirements.</p>
-            <a href="resources.html" class="button">Learn More</a>
+            <a href="#" class="button">Learn More</a>
         </div>
         <div class="resource-card">
             <h3>Social Welfare</h3>
             <p>Information about social benefits, eligibility criteria, and application procedures.</p>
-            <a href="resources.html" class="button">Learn More</a>
+            <a href="#" class="button">Learn More</a>
         </div>
     </section>
 
@@ -164,26 +158,26 @@
         </div>
     </section>
 
-    <section class="container">
+    <section id="blog" class="container">
         <h2>Latest Legal Updates</h2>
         <div class="resources-grid">
             <div class="resource-card">
                 <h3>Understanding Your Rights</h3>
                 <p>Recent changes in tenant protection laws and what they mean for you.</p>
-                <a href="blog.html" class="button">Read More</a>
+                <a href="#" class="button">Read More</a>
             </div>
             <div class="resource-card">
                 <h3>Legal Aid Success Stories</h3>
                 <p>How our volunteer lawyers helped community members resolve their legal challenges.</p>
-                <a href="blog.html" class="button">Read More</a>
+                <a href="#" class="button">Read More</a>
             </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <p>© 2024 Justice for All Initiative. All rights reserved.</p>
-            <p>Contact us: veritylawcollective@gmail.com</p>
+            <p>© 2024 Verity Law Collective. All rights reserved.</p>
+            <p>Contact us: support@veritylawcollective.org</p>
         </div>
     </footer>
 </body>
