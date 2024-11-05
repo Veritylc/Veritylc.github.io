@@ -8,6 +8,121 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <link href="styles.css?timestamp=2024-11-05-14:45" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c5282;
+            --secondary-color: #4299e1;
+            --text-color: #2d3748;
+            --light-bg: #f7fafc;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+        }
+
+        .nav {
+            background: var(--secondary-color);
+            padding: 1rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            background: var(--light-bg);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .cta-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .footer {
+            background: var(--text-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+
+        section {
+            padding: 2rem;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        section p {
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+        }
+
+        section ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        section ul li {
+            margin-bottom: 1rem;
+        }
+
+        section ul li strong {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
