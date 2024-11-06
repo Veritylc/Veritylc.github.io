@@ -3,70 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Verity Law Collective</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us | Verity Law Collective</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1>Contact Verity Law Collective</h1>
-        </div>
-    </header>
 
-    <nav class="nav">
-        <ul class="nav-links">
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="legal-resources.html">Legal Resources</a></li>
-            <li><a href="legal-aid.html">Legal Aid</a></li>
-            <li><a href="consultation.html">Consultation</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html" class="active">Contact Us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
     </nav>
 
-    <section class="contact-section">
+    <!-- Contact Section -->
+    <section id="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
-            <p>Have any questions or need assistance? Feel free to reach out to us. We’re here to help!</p>
-
-            <div class="contact-form">
-                <form action="#" method="POST">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, please reach out to us using the contact form below. We are here to help you navigate legal challenges and provide the support you need.</p>
+            
+            <!-- Contact Form -->
+            <form action="https://formspree.io/f/manyookp" method="POST">
+                <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
+                </div>
 
+                <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
+                </div>
 
+                <div class="form-group">
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
 
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-            </div>
-
-            <h2>Our Office</h2>
-            <p>If you prefer to visit us in person, here’s our office address:</p>
-            <p><strong>Verity Law Collective</strong><br>
-            123 Justice Lane, Suite 456<br>
-            Dublin, Ireland</p>
-
-            <h2>Follow Us</h2>
-            <p>Stay connected with us on social media for updates and more information:</p>
-            <ul class="social-links">
-                <li><a href="https://www.facebook.com/veritylaw" target="_blank">Facebook</a></li>
-                <li><a href="https://twitter.com/veritylaw" target="_blank">Twitter</a></li>
-                <li><a href="https://www.linkedin.com/company/veritylaw" target="_blank">LinkedIn</a></li>
-            </ul>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Verity Law Collective. All rights reserved.</p>
-            <p>Contact us: support@veritylaw.org</p>
-        </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Verity Law Collective. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
-
