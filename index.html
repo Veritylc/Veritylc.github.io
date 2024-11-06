@@ -4,157 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Verity Law Collective</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        :root {
-            --primary-color: #1a202c; /* Darker primary color */
-            --secondary-color: #2d3748; /* Darker secondary color */
-            --text-color: #e2e8f0; /* Lighter text color */
-            --light-bg: #4a5568; /* Darker background */
+        /* Inline CSS to add active link styling */
+        .navbar .nav-links li a.active {
+            background-color: #0056b3;
+            color: #fff;
+            border-radius: 4px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--primary-color);
-        }
-
+        /* Header background */
         .header {
-            background: var(--secondary-color);
-            color: white;
-            padding: 1rem;
+            background-color: #001f3f;
+            padding: 20px;
         }
 
-        .nav {
-            background: var(--light-bg);
-            padding: 1rem;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-        }
-
-        .nav-links a {
-            color: white;
+        /* Navigation bar */
+        .navbar .nav-links li a {
+            color: #fff;
+            padding: 10px 20px;
             text-decoration: none;
         }
 
-        .hero {
-            padding: 3rem 1rem;
-            text-align: center;
-            background-color: var(--secondary-color);
+        .navbar .nav-links li a:hover {
+            background-color: #333;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
+        /* Main container */
+        .main-container {
+            padding: 40px;
+            background-color: #f4f8fb;
         }
 
-        .content {
-            padding: 2rem 0;
-            text-align: center;
+        h1 {
+            color: #001f3f;
+            font-size: 2.5em;
         }
 
-        .cta-section {
-            background-color: var(--light-bg);
-            color: white;
-            text-align: center;
-            padding: 2rem;
+        p {
+            color: #333;
+            font-size: 1.1em;
+            line-height: 1.6em;
         }
 
-        .cta-section .button {
-            background-color: #3182ce;
-            color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-        }
-
-        .cta-section .button:hover {
-            background-color: #2b6cb0;
-        }
-
+        /* Footer styling */
         .footer {
-            background: var(--light-bg);
-            color: var(--text-color);
-            padding: 2rem;
+            background-color: #001f3f;
+            color: #fff;
             text-align: center;
-        }
-
-        .footer .social-icons a {
-            margin: 0 1rem;
-            color: white;
-            text-decoration: none;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
+            padding: 10px 0;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
+    <!-- Updated Navigation Bar with active link -->
     <header class="header">
-        <div class="container">
-            <h1>Verity Law Collective</h1>
-        </div>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="nav-logo">Verity Law Collective</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="consultation.html">Legal Aid Consultation</a></li>
+                    <li><a href="resources.html">Legal Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
-    <nav class="nav">
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="legal_resources.html">Legal Resources</a></li>
-            <li><a href="legal_aid.html">Legal Aid Services</a></li>
-            <li><a href="consultation.html">Get Consultation</a></li>
-            <li><a href="blog.html">Blog & News</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </nav>
+    <!-- Main Content Section -->
+    <main class="main-container">
+        <h1>Welcome to Verity Law Collective</h1>
+        <p>We are committed to making legal resources accessible to all, focusing on pro bono legal aid, youth empowerment, and advocacy for justice reform.</p>
 
-    <section class="hero">
-        <div class="container">
-            <h2>Welcome to Verity Law Collective</h2>
-            <p>We provide free, accessible legal resources and support to empower individuals and communities.</p>
-        </div>
-    </section>
+        <section>
+            <h2>Our Mission</h2>
+            <p>At Verity Law Collective, we believe in providing equal access to legal assistance. Our mission is to break down the barriers that prevent individuals from getting the legal support they need.</p>
+        </section>
 
-    <section class="content container">
-        <h3>Our Mission</h3>
-        <p>At Verity Law Collective, our mission is to make legal resources and aid accessible to everyone, regardless of their circumstances. We believe in the power of knowledge and community-driven support to help people navigate legal challenges with confidence.</p>
+        <section>
+            <h2>Our Services</h2>
+            <p>We offer a range of services, from free legal consultations to youth mentorship programs, to help guide individuals toward understanding and navigating the legal landscape.</p>
+        </section>
 
-        <h3>What We Do</h3>
-        <p>We offer a wide range of services to support individuals in need of legal assistance. This includes free consultations, legal advice, educational resources, and pro bono services provided by dedicated legal professionals. Whether you're dealing with a legal issue, need help understanding your rights, or are looking for resources to assist you, we are here to help.</p>
+        <section>
+            <h2>Get Involved</h2>
+            <p>Learn how you can contribute to the cause by volunteering, donating, or spreading awareness about the need for accessible legal aid.</p>
+        </section>
+    </main>
 
-        <h3>Why Choose Us?</h3>
-        <p>At Verity Law Collective, we are committed to providing clear, trustworthy, and supportive legal help. Our team consists of experienced lawyers and law students who work together to ensure that our services are accessible, reliable, and tailored to meet the needs of each individual. We strive to create a more equitable legal landscape where everyone has the opportunity to receive the help they deserve.</p>
-    </section>
-
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>© 2024 Verity Law Collective. All rights reserved.</p>
-            <p>Contact us: support@veritylawcollective.org</p>
-            <div class="social-icons">
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">LinkedIn</a>
-            </div>
-        </div>
+        <p>© 2024 Verity Law Collective. All rights reserved. | <a href="#">Privacy Policy</a></p>
+        <p>Connect with us: <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">LinkedIn</a></p>
     </footer>
 </body>
 </html>
-
-
