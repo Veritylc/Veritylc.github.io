@@ -4,7 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legal Resources - Verity Law Collective</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your existing CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Inline CSS additions to enhance page styling */
+
+        /* Background color for header */
+        .header {
+            background-color: #001f3f;
+            padding: 20px;
+        }
+
+        /* Navbar styling */
+        .navbar .nav-links li a {
+            color: #fff;
+            padding: 8px 15px;
+            text-decoration: none;
+        }
+
+        /* Active link styling */
+        .navbar .nav-links li a.active {
+            background-color: #0056b3;
+            border-radius: 4px;
+        }
+
+        /* Section background and spacing */
+        .resource-section {
+            background-color: #f4f8fb;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Add icons to links */
+        .resource-section ul li a::before {
+            content: '🔗 ';
+            margin-right: 5px;
+        }
+
+        /* Headings styling */
+        h1, h2 {
+            color: #001f3f;
+        }
+
+        /* Navigation list styling */
+        .resource-navigation ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .resource-navigation ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        /* Footer styling */
+        .footer {
+            background-color: #001f3f;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            border-top: 2px solid #0056b3;
+        }
+    </style>
 </head>
 <body>
     <!-- Updated Navigation Bar -->
@@ -26,90 +88,90 @@
     <!-- Page Content -->
     <main class="container">
         <h1>Legal Resources</h1>
-        <p>This section provides access to various legal resources aimed at helping individuals navigate legal issues effectively.</p>
+        <p>Access resources that can help you navigate legal issues with reliable information, free consultations, and practical tools.</p>
 
         <!-- Resource Navigation Links -->
         <div class="resource-navigation">
             <h2>Explore Legal Resources</h2>
             <ul>
-                <li><a href="#free-legal-aid">Free Legal Aid and Pro Bono Services</a></li>
-                <li><a href="#legal-guides">Legal Information and Guides</a></li>
+                <li><a href="#free-legal-aid">Free Legal Aid Services</a></li>
+                <li><a href="#legal-guides">Legal Guides</a></li>
                 <li><a href="#self-help-tools">Self-Help Tools</a></li>
-                <li><a href="#referrals">Legal Referrals and Helplines</a></li>
+                <li><a href="#referrals">Referrals & Helplines</a></li>
                 <li><a href="#rights">Know Your Rights</a></li>
-                <li><a href="#useful-sites">Useful Legal Websites</a></li>
-                <li><a href="#get-involved">How to Get Involved</a></li>
+                <li><a href="#useful-sites">Useful Sites</a></li>
+                <li><a href="#get-involved">Get Involved</a></li>
             </ul>
         </div>
 
         <!-- Resource Sections -->
-        <section id="free-legal-aid">
+        <section id="free-legal-aid" class="resource-section">
             <h2>Free Legal Aid and Pro Bono Services</h2>
             <p>Find organizations offering free or low-cost legal services.</p>
             <ul>
-                <li><a href="https://www.legalaid.ie" target="_blank">Legal Aid Board</a> - Ireland's free legal service for civil law issues.</li>
-                <li><a href="https://www.probonoinitiative.ie" target="_blank">Pro Bono Initiative Ireland</a> - Access to pro bono legal advice and support.</li>
-                <li><a href="https://www.lsc.gov" target="_blank">Legal Services Corporation (USA)</a> - Free legal aid services for low-income Americans.</li>
+                <li><a href="https://www.legalaid.ie" target="_blank">Legal Aid Board</a> - Ireland's service for civil law issues.</li>
+                <li><a href="https://www.probonoinitiative.ie" target="_blank">Pro Bono Initiative Ireland</a> - Access pro bono legal advice.</li>
+                <li><a href="https://www.lsc.gov" target="_blank">Legal Services Corporation (USA)</a> - Free legal aid for low-income Americans.</li>
             </ul>
         </section>
 
-        <section id="legal-guides">
+        <section id="legal-guides" class="resource-section">
             <h2>Legal Information and Guides</h2>
-            <p>Guides covering various areas of law to help you understand your rights.</p>
+            <p>Guides covering different areas of law to help you understand your rights.</p>
             <ul>
-                <li><a href="https://www.consumerhelp.ie" target="_blank">Consumer Rights Ireland</a> - Understand your rights in purchases, returns, and contracts.</li>
-                <li><a href="https://www.familylaw.ie" target="_blank">Family Law Information</a> - Topics include divorce, custody, and domestic abuse support.</li>
-                <li><a href="https://www.employmentrights.ie" target="_blank">Employment Rights Ireland</a> - Information on workplace rights and protections.</li>
+                <li><a href="https://www.consumerhelp.ie" target="_blank">Consumer Rights Ireland</a> - Rights for purchases, returns, contracts.</li>
+                <li><a href="https://www.familylaw.ie" target="_blank">Family Law Info</a> - Divorce, custody, and domestic abuse support.</li>
+                <li><a href="https://www.employmentrights.ie" target="_blank">Employment Rights Ireland</a> - Information on workplace protections.</li>
             </ul>
         </section>
 
-        <section id="self-help-tools">
+        <section id="self-help-tools" class="resource-section">
             <h2>Self-Help Tools</h2>
-            <p>Access templates and tools to handle basic legal procedures.</p>
+            <p>Access templates and tools for basic legal tasks.</p>
             <ul>
-                <li><a href="https://www.lawdepot.ie" target="_blank">LawDepot Ireland</a> - Templates for wills, POAs, and other legal documents.</li>
-                <li><a href="https://www.courts.ie/forms" target="_blank">Irish Court Forms</a> - Official forms for filing legal matters in Ireland.</li>
-                <li><a href="https://www.rocketlawyer.com" target="_blank">Rocket Lawyer (USA)</a> - DIY legal help, templates, and limited legal guidance.</li>
+                <li><a href="https://www.lawdepot.ie" target="_blank">LawDepot Ireland</a> - Templates for wills, POAs, and contracts.</li>
+                <li><a href="https://www.courts.ie/forms" target="_blank">Irish Court Forms</a> - Forms for filing in Irish courts.</li>
+                <li><a href="https://www.rocketlawyer.com" target="_blank">Rocket Lawyer (USA)</a> - DIY legal help and templates.</li>
             </ul>
         </section>
 
-        <section id="referrals">
+        <section id="referrals" class="resource-section">
             <h2>Legal Referrals and Helplines</h2>
-            <p>Find referrals to specialized legal help or immediate legal assistance.</p>
+            <p>Get referrals to specialized legal help or immediate assistance.</p>
             <ul>
-                <li><a href="https://www.lawlibrary.ie/services/find-a-barrister" target="_blank">Law Library Ireland</a> - Search for a barrister or legal representative.</li>
-                <li><a href="https://www.womens-aid.ie/services/helpline.html" target="_blank">Women's Aid Ireland</a> - Support for domestic abuse victims.</li>
-                <li><a href="https://www.citizensinformation.ie/en/contact-us" target="_blank">Citizens Information Helpline</a> - General legal and civil assistance in Ireland.</li>
+                <li><a href="https://www.lawlibrary.ie/services/find-a-barrister" target="_blank">Law Library Ireland</a> - Find a barrister or legal aid.</li>
+                <li><a href="https://www.womens-aid.ie/services/helpline.html" target="_blank">Women's Aid Ireland</a> - Domestic abuse support helpline.</li>
+                <li><a href="https://www.citizensinformation.ie/en/contact-us" target="_blank">Citizens Information Helpline</a> - General assistance.</li>
             </ul>
         </section>
 
-        <section id="rights">
+        <section id="rights" class="resource-section">
             <h2>Know Your Rights</h2>
-            <p>Learn about fundamental rights in various situations.</p>
+            <p>Essential information on fundamental rights in various situations.</p>
             <ul>
-                <li><a href="https://www.justice.ie/en/JELR/Know_Your_Rights" target="_blank">Know Your Rights - Ireland</a> - Essential legal rights in Irish law.</li>
-                <li><a href="https://www.aclu.org/know-your-rights" target="_blank">ACLU Know Your Rights (USA)</a> - U.S.-focused civil rights information.</li>
-                <li><a href="https://www.equalityhumanrights.com/en/know-your-rights" target="_blank">Equality and Human Rights Commission (UK)</a> - Rights and protections under UK law.</li>
+                <li><a href="https://www.justice.ie/en/JELR/Know_Your_Rights" target="_blank">Know Your Rights - Ireland</a> - Key rights under Irish law.</li>
+                <li><a href="https://www.aclu.org/know-your-rights" target="_blank">ACLU Know Your Rights (USA)</a> - U.S. civil rights resources.</li>
+                <li><a href="https://www.equalityhumanrights.com/en/know-your-rights" target="_blank">Equality and Human Rights (UK)</a> - UK rights information.</li>
             </ul>
         </section>
 
-        <section id="useful-sites">
+        <section id="useful-sites" class="resource-section">
             <h2>Useful Legal Websites</h2>
-            <p>Government, library, and advocacy sites with extensive legal information.</p>
+            <p>Government, library, and advocacy websites with extensive information.</p>
             <ul>
-                <li><a href="https://www.justia.com" target="_blank">Justia</a> - Comprehensive database of legal resources and case law.</li>
-                <li><a href="https://www.findlaw.com" target="_blank">FindLaw</a> - Legal information and resources for various U.S. topics.</li>
-                <li><a href="https://www.lawlibrary.ie" target="_blank">The Law Library Ireland</a> - Access to extensive legal resources in Ireland.</li>
+                <li><a href="https://www.justia.com" target="_blank">Justia</a> - Case law, legal information, and more.</li>
+                <li><a href="https://www.findlaw.com" target="_blank">FindLaw</a> - U.S. legal resources across various topics.</li>
+                <li><a href="https://www.lawlibrary.ie" target="_blank">The Law Library Ireland</a> - Extensive Irish legal resources.</li>
             </ul>
         </section>
 
-        <section id="get-involved">
+        <section id="get-involved" class="resource-section">
             <h2>How to Get Involved</h2>
-            <p>Join Verity Law Collective’s mission to support individuals in need of legal aid.</p>
+            <p>Join our mission to provide legal aid for those in need.</p>
             <ul>
-                <li><a href="volunteer.html">Volunteer Opportunities</a> - Contribute to our legal aid initiatives and help those in need.</li>
-                <li><a href="donate.html">Donate</a> - Support our work and help us expand our services.</li>
-                <li><a href="workshops.html">Legal Education Events</a> - Learn about upcoming workshops and training.</li>
+                <li><a href="volunteer.html">Volunteer Opportunities</a> - Help us in our legal aid efforts.</li>
+                <li><a href="donate.html">Donate</a> - Support our mission and outreach.</li>
+                <li><a href="workshops.html">Education Events</a> - Join our upcoming legal workshops.</li>
             </ul>
         </section>
     </main>
@@ -118,7 +180,7 @@
     <footer class="footer">
         <div class="container">
             <p>© 2024 Verity Law Collective. All rights reserved.</p>
-            <p><a href="contact.html">Contact Us</a></p>
+            <p>Connect with us: <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">LinkedIn</a></p>
         </div>
     </footer>
 </body>
