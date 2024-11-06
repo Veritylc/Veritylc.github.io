@@ -1,104 +1,216 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    box-sizing: border-box;
 }
 
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Container for centralizing content */
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-h1, h2 {
-    color: #1c1c1c;
-}
-
-ul {
-    list-style-type: none;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-/* Header */
-.header {
-    background-color: #1c3c54;
-    color: white;
-    padding: 20px 0;
-}
-
-.header h1 {
-    text-align: center;
-}
-
-/* Navigation */
-.nav {
-    background-color: #2a4d6b;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: center;
+/* Navigation Bar Styling */
+nav {
+    background-color: #003366;
     padding: 10px 0;
 }
 
-.nav-links li {
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
     margin: 0 20px;
 }
 
-.nav-links a {
+nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
 }
 
-.nav-links a:hover,
-.nav-links .active {
-    color: #f1a236;
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #0073e6;
+    border-radius: 5px;
 }
 
-/* Hero Section */
-.hero-section {
-    background-color: #e3f2fd;
-    padding: 50px 0;
-    text-align: center;
+/* Header and Titles */
+h1, h2, h3 {
+    color: #2c3e50;
 }
 
-.hero-section h2 {
-    color: #1c3c54;
-}
-
-.hero-section p {
-    color: #555;
-}
-
-/* Content Sections */
-section {
-    margin: 40px 0;
-}
-
-section h2 {
-    font-size: 1.8em;
+h2 {
     margin-bottom: 20px;
 }
 
-section p {
-    font-size: 1.2em;
-    color: #333;
+/* Sections */
+section {
+    padding: 40px 0;
 }
 
-section ul {
-    padding-left: 20px;
+#home, #about, #resources, #contact {
+    background-color: white;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
-.footer {
-    background-color: #1c3c54;
+#home {
+    background-color: #003366;
+    color: white;
+}
+
+#home h2 {
     color: white;
     text-align: center;
+}
+
+/* Home Page Styling */
+#home .container {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#home p {
+    font-size: 18px;
+}
+
+/* About Us Page Styling */
+#about .container {
+    padding: 40px 20px;
+}
+
+#about h2 {
+    text-align: center;
+}
+
+/* Resources Page Styling */
+#resources .container {
+    padding: 40px 20px;
+}
+
+ul.resources-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+ul.resources-list li {
+    margin-bottom: 15px;
+}
+
+ul.resources-list a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+ul.resources-list a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Page Styling */
+#contact {
+    padding: 40px 0;
+    background-color: #f4f4f4;
+}
+
+#contact .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
     padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0073e6;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h1, h2, h3 {
+        font-size: 24px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
 }
 
