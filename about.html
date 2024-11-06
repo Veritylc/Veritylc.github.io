@@ -1,65 +1,56 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Verity Law Collective</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us | Verity Law Collective</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1>About Verity Law Collective</h1>
-        </div>
-    </header>
 
-    <nav class="nav">
-        <ul class="nav-links">
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About Us</a></li>
-            <li><a href="legal-resources.html">Legal Resources</a></li>
-            <li><a href="legal-aid.html">Legal Aid</a></li>
-            <li><a href="consultation.html">Consultation</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
     </nav>
 
-    <section class="about-section">
+    <!-- Contact Section -->
+    <section id="contact">
         <div class="container">
-            <h2>Our Story</h2>
-            <p>Founded in 2024, Verity Law Collective was created to make legal services accessible to everyone, regardless of their financial means. We strive to break down the barriers that often prevent individuals from receiving the legal help they need. Our mission is to ensure that no one has to face the complexities of the legal system alone.</p>
+            <h2>Contact Us</h2>
+            <p>If you have any questions, need legal assistance, or simply want to learn more about our work, don't hesitate to reach out. We are here to assist you and offer support when you need it most.</p>
+            
+            <!-- Contact Form -->
+            <form action="https://formspree.io/f/manyookp" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </section>
 
-    <section class="what-we-do">
-        <div class="container">
-            <h2>What We Do</h2>
-            <p>At Verity Law Collective, we provide a range of services designed to support those in need:</p>
-            <ul>
-                <li><strong>Free Legal Resources:</strong> Guides, articles, and tools to help you understand your legal rights.</li>
-                <li><strong>Pro Bono Legal Aid:</strong> Free legal assistance from a network of law firms and legal professionals.</li>
-                <li><strong>Legal Consultations:</strong> One-on-one sessions to help you navigate your legal issues.</li>
-                <li><strong>Community Outreach:</strong> We host legal education workshops and offer training programs for individuals and organizations.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="why-we-do">
-        <div class="container">
-            <h2>Why We Do It</h2>
-            <p>We do this because we believe that legal aid should not depend on one's income. We work to eliminate financial barriers to accessing justice, and we are committed to providing resources, services, and support to individuals who are otherwise excluded from the legal system.</p>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Verity Law Collective. All rights reserved.</p>
-            <p>Contact us: support@veritylaw.org</p>
-        </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Verity Law Collective. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
-
-
-
-
