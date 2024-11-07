@@ -3,8 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultation - Verity Law Collective</title>
+    <title>Contact Us | Verity Law Collective</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional Styling for Contact Form */
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #0056b3;
+            outline: none;
+        }
+
+        button {
+            background-color: #0056b3;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #003d7a;
+        }
+
+        .form-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-container h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-container p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
     <!-- Header with navigation -->
@@ -17,51 +68,36 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="legal-resources.html">Legal Resources</a></li>
-                <li><a href="consultation.html" class="active">Consultation</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="consultation.html">Consultation</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Contact Form Section -->
+    <section id="contact">
         <div class="container">
-            <h1>Consultation</h1>
-            <p>Get in touch with us for legal consultations, advice, and support. We're here to help you navigate your legal challenges.</p>
-        </div>
-    </section>
+            <h1>Contact Us</h1>
+            <p>If you have any questions, suggestions, or need assistance, we would love to hear from you! Please use the form below to reach out to us, and we'll get back to you as soon as possible.</p>
 
-    <!-- Consultation Section -->
-    <section id="consultation">
-        <div class="container">
-            <h2>Book a Consultation</h2>
-            <p>If you're seeking legal advice or need support on a specific matter, we're here to assist. Please fill out the form below to schedule a consultation with one of our experts:</p>
-
-            <form action="https://formspree.io/f/manyookp" method="POST">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" placeholder="Briefly describe your legal matter" rows="6" required></textarea>
-                </div>
-                <button type="submit">Schedule Consultation</button>
-            </form>
-
-            <h2>Why Choose Us?</h2>
-            <p>Our team of legal experts is committed to providing you with the highest level of care and service. We specialize in various fields of law and offer tailored consultations to meet your needs:</p>
-            <ul>
-                <li><strong>Expert Legal Guidance:</strong> Our team offers insight and advice based on years of experience.</li>
-                <li><strong>Confidentiality:</strong> We prioritize your privacy and ensure all matters are handled with discretion.</li>
-                <li><strong>Flexible Availability:</strong> We offer consultations at times that fit your schedule.</li>
-            </ul>
-
-            <p>Let us help you take the next step in resolving your legal issues. Reach out today to schedule your consultation!</p>
+            <!-- Form Container with Styling -->
+            <div class="form-container">
+                <form action="https://formspree.io/f/manyookp" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Write your message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
 
