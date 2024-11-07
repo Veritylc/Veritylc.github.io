@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Resources - Verity Law Collective</title>
+    <title>Consultation - Verity Law Collective</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,8 +16,8 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="legal-resources.html" class="active">Legal Resources</a></li>
-                <li><a href="consultation.html">Consultation</a></li>
+                <li><a href="legal-resources.html">Legal Resources</a></li>
+                <li><a href="consultation.html" class="active">Consultation</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -26,40 +26,42 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Legal Resources</h1>
-            <p>Access to free legal assistance and educational resources to help you navigate the legal system.</p>
+            <h1>Consultation</h1>
+            <p>Get in touch with us for legal consultations, advice, and support. We're here to help you navigate your legal challenges.</p>
         </div>
     </section>
 
-    <!-- Legal Resources Section -->
-    <section class="resources-section">
+    <!-- Consultation Section -->
+    <section id="consultation">
         <div class="container">
-            <h2>Free Legal Aid and Pro Bono Services</h2>
-            <p>Many individuals face legal issues but cannot afford traditional legal services. Below are resources that offer free legal assistance:</p>
+            <h2>Book a Consultation</h2>
+            <p>If you're seeking legal advice or need support on a specific matter, we're here to assist. Please fill out the form below to schedule a consultation with one of our experts:</p>
+
+            <form action="https://formspree.io/f/manyookp" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Briefly describe your legal matter" rows="6" required></textarea>
+                </div>
+                <button type="submit">Schedule Consultation</button>
+            </form>
+
+            <h2>Why Choose Us?</h2>
+            <p>Our team of legal experts is committed to providing you with the highest level of care and service. We specialize in various fields of law and offer tailored consultations to meet your needs:</p>
             <ul>
-                <li><strong>Legal Aid Organizations:</strong> Local legal aid services offering free assistance. Contact your regional provider for services in your area.</li>
-                <li><strong>Pro Bono Legal Assistance:</strong> Law firms and attorneys offering free services for qualifying individuals. Find resources in your area.</li>
-                <li><strong>National Legal Aid Networks:</strong> National organizations such as the Legal Services Corporation that provide access to legal support services across the country.</li>
+                <li><strong>Expert Legal Guidance:</strong> Our team offers insight and advice based on years of experience.</li>
+                <li><strong>Confidentiality:</strong> We prioritize your privacy and ensure all matters are handled with discretion.</li>
+                <li><strong>Flexible Availability:</strong> We offer consultations at times that fit your schedule.</li>
             </ul>
 
-            <h2>Legal Information and Guides</h2>
-            <p>These educational resources provide you with the basics of various legal topics:</p>
-            <ul>
-                <li><strong>Consumer Rights:</strong> Learn about your rights when it comes to consumer transactions, fraud, and disputes.</li>
-                <li><strong>Family Law:</strong> Information on divorce, child custody, and domestic violence.</li>
-                <li><strong>Criminal Law:</strong> Understand the criminal justice system, your rights when arrested, and available legal defenses.</li>
-                <li><strong>Employment Law:</strong> Get the basics on workplace rights, wage disputes, and discrimination issues.</li>
-                <li><strong>Housing Law:</strong> Know your tenant rights, the eviction process, and resolving landlord disputes.</li>
-                <li><strong>Immigration Law:</strong> Resources for individuals navigating immigration and visa issues.</li>
-            </ul>
-
-            <h2>Self-Help Tools</h2>
-            <p>Access tools and templates to assist with basic legal processes:</p>
-            <ul>
-                <li><strong>Legal Forms:</strong> Download common legal forms such as power of attorney, wills, and rental agreements.</li>
-                <li><strong>Legal Rights Calculator:</strong> A self-assessment tool to understand if you qualify for specific legal assistance programs.</li>
-                <li><strong>Case Evaluation Tools:</strong> Get guidance on how to evaluate the strength of your case before contacting an attorney.</li>
-            </ul>
+            <p>Let us help you take the next step in resolving your legal issues. Reach out today to schedule your consultation!</p>
         </div>
     </section>
 
