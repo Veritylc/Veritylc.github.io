@@ -4,20 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Family Law Resource Center | Verity Law Collective</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file used by Consumer Law -->
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header & Navbar Styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo a {
+            color: #fff;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        .navbar {
+            display: flex;
+        }
+
+        .navbar-menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-menu li {
+            display: inline;
+        }
+
+        .navbar-menu a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        .navbar-menu a:hover,
+        .navbar-menu a.active {
+            background-color: #555;
+        }
+
+        /* Main Content Styling */
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
     <header class="header">
-        <div class="navbar">
-            <a href="index.html" class="logo">Verity Law Collective</a>
-            <ul class="navbar-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="consumer-rights.html">Consumer Rights</a></li>
-                <li><a href="family-law.html" class="active">Family Law</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Verity Law Collective</a>
+            </div>
+            <nav class="navbar">
+                <ul class="navbar-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="consumer-rights.html">Consumer Rights</a></li>
+                    <li><a href="family-law.html" class="active">Family Law</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
