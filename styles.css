@@ -21,11 +21,13 @@ body {
 }
 
 /* Header & Navigation */
-.navbar {
+.header {
     background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
 }
 
-.nav {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +37,7 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: white;
+    color: #fff;
 }
 
 .navbar-menu {
@@ -49,7 +51,7 @@ body {
     text-decoration: none;
     padding: 0.5rem;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .navbar-menu a:hover {
@@ -144,33 +146,61 @@ section p {
     color: #ccc;
 }
 
-/* Mobile Styles */
+/* Navbar Mobile View */
 @media (max-width: 768px) {
-    /* Navbar */
-    .nav {
-        flex-direction: column; /* Stack the navbar items vertically */
-        align-items: stretch; /* Stretch the items to fill the width */
+    /* Switch Navbar Layout to Vertical */
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: center; /* Align items in the center */
+        padding: 0.5rem 1rem;
     }
 
     .navbar-menu {
         display: flex;
         flex-direction: column; /* Stack the links vertically */
         width: 100%; /* Make the menu take the full width */
-        gap: 1rem; /* Add space between items */
+        gap: 0.75rem; /* Add space between links */
+        align-items: flex-start; /* Align items to the left */
     }
 
     .navbar-menu a {
-        width: 100%; /* Make each link take the full width */
-        padding: 1rem; /* Make links bigger for easier touch interaction */
+        width: 100%; /* Make links take the full width */
+        padding: 1rem 1.5rem; /* Increase padding for easier interaction */
         text-align: left; /* Align text to the left */
         background-color: #333;
-        border-top: 1px solid #444;
+        border-top: 1px solid #444; /* Add a slight border between items */
     }
 
     .navbar-menu a:hover {
-        background-color: #575757;
+        background-color: #575757; /* Darker shade when hovering */
     }
 }
 
+/* Navbar for Larger Screens */
+@media (min-width: 769px) {
+    .navbar {
+        display: flex; /* Keep navbar items horizontal */
+        justify-content: space-between; /* Space out items */
+        align-items: center;
+        padding: 1rem 2rem;
+    }
 
+    .navbar-menu {
+        list-style: none;
+        display: flex; /* Keep navbar items horizontal */
+        gap: 1.5rem;
+    }
 
+    .navbar-menu a {
+        color: white;
+        padding: 0.5rem 1rem;
+        background-color: transparent;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar-menu a:hover {
+        background-color: #006699; /* Background color on hover */
+    }
+}
