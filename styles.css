@@ -21,9 +21,8 @@ body {
 }
 
 /* Header & Navigation */
-.header {
+.navbar {
     background-color: #333;
-    color: #fff;
 }
 
 .nav {
@@ -36,92 +35,23 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    color: white;
 }
 
-.nav-links {
-    list-style: none;
+.navbar-menu {
     display: flex;
     gap: 1.5rem;
 }
 
-.nav-links a {
+.navbar-menu a {
     color: #fff;
     text-decoration: none;
     padding: 0.5rem;
     border-radius: 5px;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.navbar-menu a:hover {
     background-color: #006699;
-}
-
-/* Mobile Navbar (Hamburger Menu) */
-.navbar-toggle {
-    display: none; /* Hidden by default */
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    padding: 0;
-}
-
-.navbar-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-menu a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 0.5rem;
-}
-
-@media (max-width: 768px) {
-    /* Adjust navbar for mobile */
-    .nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar-menu {
-        display: none; /* Hide menu by default */
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .navbar-menu a {
-        width: 100%;
-        padding: 1rem 2rem;
-        text-align: left;
-        background-color: #333;
-        border-top: 1px solid #444;
-    }
-
-    /* Show the navbar menu when active */
-    .navbar.active .navbar-menu {
-        display: flex;
-    }
-
-    /* Show the toggle button on mobile */
-    .navbar-toggle {
-        display: block;
-        color: white;
-        font-size: 30px;
-    }
-
-    /* Navbar menu active state styling */
-    .navbar.active .navbar-toggle {
-        color: white;
-    }
-
-    /* Navbar links hover for mobile */
-    .navbar-menu a:hover {
-        background-color: #575757;
-    }
 }
 
 /* Hero Section */
@@ -211,4 +141,33 @@ section p {
 .footer a:hover {
     color: #ccc;
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Navbar */
+    .nav {
+        flex-direction: column; /* Stack the navbar items vertically */
+        align-items: flex-start; /* Align the items to the left */
+    }
+
+    .navbar-menu {
+        display: flex;
+        flex-direction: column; /* Stack links vertically */
+        gap: 1rem; /* Add space between items */
+        width: 100%; /* Make the menu take the full width */
+    }
+
+    .navbar-menu a {
+        padding: 1rem;
+        width: 100%; /* Make each link take the full width */
+        text-align: left; /* Align text to the left */
+        background-color: #333;
+        border-top: 1px solid #444;
+    }
+
+    .navbar-menu a:hover {
+        background-color: #575757;
+    }
+}
+
 
