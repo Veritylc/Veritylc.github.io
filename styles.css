@@ -56,6 +56,74 @@ body {
     background-color: #006699;
 }
 
+/* Mobile Navbar (Hamburger Menu) */
+.navbar-toggle {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-menu a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    /* Adjust navbar for mobile */
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-menu {
+        display: none; /* Hide menu by default */
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-menu a {
+        width: 100%;
+        padding: 1rem 2rem;
+        text-align: left;
+        background-color: #333;
+        border-top: 1px solid #444;
+    }
+
+    /* Show the navbar menu when active */
+    .navbar.active .navbar-menu {
+        display: flex;
+    }
+
+    /* Show the toggle button on mobile */
+    .navbar-toggle {
+        display: block;
+        color: white;
+        font-size: 30px;
+    }
+
+    /* Navbar menu active state styling */
+    .navbar.active .navbar-toggle {
+        color: white;
+    }
+
+    /* Navbar links hover for mobile */
+    .navbar-menu a:hover {
+        background-color: #575757;
+    }
+}
+
 /* Hero Section */
 .hero {
     background-color: #006699;
