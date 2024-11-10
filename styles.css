@@ -39,6 +39,7 @@ body {
 }
 
 .navbar-menu {
+    list-style: none;
     display: flex;
     gap: 1.5rem;
 }
@@ -48,6 +49,7 @@ body {
     text-decoration: none;
     padding: 0.5rem;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .navbar-menu a:hover {
@@ -147,19 +149,19 @@ section p {
     /* Navbar */
     .nav {
         flex-direction: column; /* Stack the navbar items vertically */
-        align-items: flex-start; /* Align the items to the left */
+        align-items: stretch; /* Stretch the items to fill the width */
     }
 
     .navbar-menu {
         display: flex;
-        flex-direction: column; /* Stack links vertically */
-        gap: 1rem; /* Add space between items */
+        flex-direction: column; /* Stack the links vertically */
         width: 100%; /* Make the menu take the full width */
+        gap: 1rem; /* Add space between items */
     }
 
     .navbar-menu a {
-        padding: 1rem;
         width: 100%; /* Make each link take the full width */
+        padding: 1rem; /* Make links bigger for easier touch interaction */
         text-align: left; /* Align text to the left */
         background-color: #333;
         border-top: 1px solid #444;
