@@ -13,33 +13,48 @@
         }
 
         /* Navbar */
-        nav {
+        .header {
             background-color: #002855;
-            padding: 10px;
+            padding: 10px 20px;
         }
 
-        nav ul {
-            list-style-type: none;
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .navbar-menu {
+            list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: space-around;
+            gap: 15px;
         }
 
-        nav ul li {
+        .navbar-menu li {
             display: inline;
         }
 
-        nav ul li a {
+        .navbar-menu a {
             color: white;
             text-decoration: none;
-            padding: 10px 15px;
             font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
 
-        nav ul li a:hover {
+        .navbar-menu a.active,
+        .navbar-menu a:hover {
             background-color: #1a2b6f;
-            border-radius: 5px;
         }
 
         /* Main container */
@@ -80,33 +95,30 @@
             <div class="logo">
                 <a href="index.html">Verity Law Collective</a>
             </div>
-            <nav class="navbar">
+            <nav>
                 <ul class="navbar-menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="legal-resources.html">Legal Resources</a></li>
-                    <li><a href="resources.html" class="active">Resources</a></li>
+                    <li><a href="resources.html">Resources</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-
     <!-- Main Content -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprehensive Guide to Consumer Rights</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
-        h2, h3 { color: #2a3b8f; }
-        ul { margin-left: 20px; list-style-type: disc; }
-        p { margin-bottom: 10px; }
-    </style>
-</head>
-<body>
+    <div class="container">
+        <h1>Welcome to the Consumer Rights Resource Center</h1>
+        <p>Empowering consumers with knowledge and tools to assert their rights.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Verity Law Collective. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
 
 <!-- Consumer Rights Overview -->
 <section id="overview">
