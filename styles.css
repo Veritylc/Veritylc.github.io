@@ -56,6 +56,26 @@ body {
     background-color: #006699;
 }
 
+/* Responsive Navigation for Small Screens */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 /* Hero Section */
 .hero {
     background-color: #006699;
@@ -143,4 +163,5 @@ section p {
 .footer a:hover {
     color: #ccc;
 }
+
  
